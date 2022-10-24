@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Room | CRWebsite</title>
-    <link rel="stylesheet" href="file/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
