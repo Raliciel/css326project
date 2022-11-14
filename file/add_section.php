@@ -22,9 +22,10 @@
 	</div>
 	<div id="div_main">
         <div id= "div_left">
-            <ul>
-                <li><a href="add_section.php">Add</a></li>
-                <li><a href="show_section.php">Show</a></li>
+        <ul>
+                <li><a href="add_account.php">Add</a></li>
+                <li><a href="show_account.php">Show</a></li>
+                <li><a href="accountprofile.php">Go to profile</a></li>
             </ul>
         </div>
 		<div id="div_content" class="form"> 
