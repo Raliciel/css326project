@@ -44,20 +44,20 @@ anything with :pleading_face: will be in my care (cus I have cool feature to thi
 - [x] Make database
 - [x] Make index.html
   - [x] Link index.html to database
-- [ ] Make Account Profile 
+- [X] Make Account Profile 
 * **Admin side**
 - [x] Make add_account.php
   - [x] Link add_account.php to database
   - [x] Make a page to show table of account from database and link it to database
 - [x] Make add_room.php
-  - [ ] Link add_room.php to database
-  - [ ] Make a page to show table of room from database and link it to database
+  - [X] Link add_room.php to database
+  - [X] Make a page to show table of room from database and link it to database
 - [x] Make add_course.php
-  - [ ] Link add_course.php to database
-  - [ ] Make a page to show table of course from database and link it to database
+  - [X] Link add_course.php to database
+  - [X] Make a page to show table of course from database and link it to database
 - [x] Make add_section.php
-  - [ ] Link add_section.php to database
-  - [ ] Make a page to show table of section from database and link it to database
+  - [X] Link add_section.php to database
+  - [X] Make a page to show table of section from database and link it to database
 - [x] Create delete script
 - [x] Create generate password script
 - [x] Make uploading image show up
