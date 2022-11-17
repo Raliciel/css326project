@@ -1,4 +1,4 @@
-<?php require_once('connect.php'); ?>
+<?php require_once('connect.php');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,21 +22,21 @@
 	</div>
 	<div id="div_main">
         <div id= "div_left">
-        <ul>
-                <li><a href="add_account.php">Add</a></li>
-                <li><a href="show_account.php">Show</a></li>
+            <ul>
+                <li><a href="add_course.php">Add</a></li>
+                <li><a href="show_course.php">Show</a></li>
                 <li><a href="accountprofile.php">Go to profile</a></li>
             </ul>
         </div>
 		<div id="div_content" class="form"> 
-            <form method = "post">
+            <form action = "show_course.php" method = "post">
                 <div>
                     <h2>Add Course</h2>
                         <div>
                             <label>Course ID</label>
-                            <input type = "text" name = "roomid">
+                            <input type = "text" name = "courseid">
                             <label>Course Name</label>
-                            <input type = "text" name = "roomid">
+                            <input type = "text" name = "coursename">
                             <label>Grade</label>
                             <input type = "number" min = "1" max = "12" step = "1" name = "coursegrade"/>
                             <label>Teacher</label>
@@ -53,6 +53,8 @@
                                     }
                                 ?>
                             </select>
+                            <input type = "hidden" name = "regisdate" id = "regisdate">
+                            <script src="./javascript/getCurrentDate.js"></script>
                         </div>
                         <div class = "center">
                             <input type = "submit" name = "submit" value = "Submit">

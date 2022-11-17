@@ -179,16 +179,21 @@ h2{
 }
 
 .form input[type="submit"]{
+	color: white;
 	padding-left: 0.25em;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	margin-top: .25em;
 	background-color:#4f497c;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	text-align:center;
-	display: block;
+	border-radius: 10px;
+	border: 0px;
+	text-align: center;
 	width:150px;
+}
+
+.form input[type="submit"]:hover{
+	color: #d8ceff;
+	background-color: #8d89aa;
 }
 
 .form input[type="checkbox"]{

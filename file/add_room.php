@@ -1,4 +1,4 @@
-<?php require_once('connect.php'); ?>
+<?php require_once('connect.php');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,26 +23,28 @@
 	<div id="div_main">
         <div id= "div_left">
             <ul>
-                <li><a href="add_account.php">Add</a></li>
-                <li><a href="show_account.php">Show</a></li>
+                <li><a href="add_room.php">Add</a></li>
+                <li><a href="show_room.php">Show</a></li>
                 <li><a href="accountprofile.php">Go to profile</a></li>
             </ul>
         </div>
 		<div id="div_content" class="form"> 
-            <form method = "post">
+            <form action = "show_room.php" method = "post">
                 <div>
                     <h2>Add Room</h2>
                     <div>
                         <label>Room ID</label>
                         <input type = "text" name = "roomid">
                         <label>Building Name</label>
-                        <input type = "text" name = "building name">
+                        <input type = "text" name = "building_name">
                         <label>Building Picture</label>
                         <script src = "./javascript/displayimage.js"></script>
                         <input type="file" name = "buildingimage" id="image-input" accept="image/jpeg, image/png, image/jpg">
                         <div id="display-image"></div>
                         <label>Room Size</label>
                         <input type = "number" min = "0" step = "1" name = "number">
+                        <input type = "hidden" name = "regisdate" id = "regisdate">
+                        <script src="./javascript/getCurrentDate.js"></script>
                         </div>
                         <div class = "center">
                             <input type = "submit" name = "submit" value = "Submit">

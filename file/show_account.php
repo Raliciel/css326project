@@ -40,8 +40,8 @@
                     ###raw image can be input inside database
                     $image = $_POST['image'];
                     $regisdate = $_POST['regisdate'];
-
-                    $q="INSERT INTO account(f_name, l_name, email, username, passwd, user_picture, `type`, regis_date) VALUES ('$f_name','$l_name','$email','$username', '$pass', '$image','$type', '$regisdate');";
+                    $userid = $_COOKIE["idsharing"]; 
+                    $q="INSERT INTO account(f_name, l_name, email, username, passwd, user_picture, `type`, regis_date, admin_id) VALUES ('$f_name','$l_name','$email','$username', '$pass', '$image','$type', '$regisdate', '$userid');";
                     $result=$mysqli->query($q);
                     if(!$result){
                         echo "INSERT failed. Error: ".$mysqli->error ;
@@ -59,17 +59,19 @@
                         <col width="5%">
                         <col width="10%">
                         <col width="10%">
+                        <col width="10%">
                         <col width = "5%">
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Type</th>
-                            <th>Added By</th>
+                            <th>Password</th>
+                            <th>Admin</th>
                             <th>Register Date</th>
                         </tr>
                         <?php
-                            $q="select * from account";
+                            $q="select a.user_id, a.f_name, a.l_name, a.email, a.type, a.passwd, a.regis_date, admin.f_name as admin_name from account a join account admin where a.admin_id = admin.user_id";
                             $result=$mysqli->query($q);
                             if(!$result){
                                 echo "Select failed. Error: ".$mysqli->error ;
@@ -77,11 +79,12 @@
                             } 
                             while($row=$result->fetch_array()){ ?>
                         <tr>
-                            <td><?=$row['f_name']?></td>
-                            <td><?=$row['l_name']?></td>
+                            <td><?=$row['user_id']?></td>
+                            <td><?=$row['f_name']?> <?=$row['l_name']?></td>
                             <td><?=$row['email']?></td>
                             <td><?=$row['type']?></td>
-                            <td><?=$row['admin_id']?></td>
+                            <td><?=$row['passwd']?></td>
+                            <td><?=$row['admin_name']?></td>
                             <td><?=$row['regis_date']?></td>
                             <td style="background-color: #d23390; text-align: center;"><a href="delete.php?accountid=<?=$row['user_id']?>">X</a></td>
                         </tr>

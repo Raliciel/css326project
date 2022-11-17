@@ -14,7 +14,7 @@
 		   header("Location: show_account.php");
 	}
 	elseif(isset($courseid)) {
-		$q="DELETE FROM course where course_id=$courseid";
+		$q="DELETE FROM course where course_id like '$courseid'";
 			if(!$mysqli->query($q)){
 				echo "DELETE failed. Error: ".$mysqli->error ;
 		   }
