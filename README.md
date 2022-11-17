@@ -14,12 +14,14 @@ Download this repos to your computer, edit the .php files as following checklist
 
 ## Website Roadmap
 ```mermaid
-graph TD;
-    index.html-->adminprofile.php;
-    adminprofile.php-->show_account.php;
-    adminprofile.php-->show_course.php;
-    adminprofile.php-->show_room.php;
-    adminprofile.php-->show_section.php;
+graph LR;
+    index.html-->login.php;
+    login.php-->accountprofile.php
+    accountprofile.php-->show_account.php;
+    accountprofile.php-->show_course.php;
+    accountprofile.php-->show_room.php;
+    accountprofile.php-->show_section.php;
+    accountprofile.php-->show_book.php
     show_account.php-->add_account.php;
     show_course.php-->add_course.php;
     show_room.php-->add_room.php;
@@ -28,12 +30,11 @@ graph TD;
     add_course.php-->show_course.php;
     add_room.php-->show_room.php;
     add_section.php-->show_section.php;
-    adminprofile.php --> edit_profile.php;
-    index.html --> teacherprofile.php;
-    teacherprofile.php --> show_booking.php;
-    show_booking.php --> add_booking.php;
-    add_booking.php --> show_booking.php;
-    teacherprofile.php --> edit_profile.php
+    accountprofile.php --> changepass.php;
+    changepass.php --> updatepass.php;
+    updatepass.php-->accountprofile.php;
+    show_book.php --> add_book.php;
+    add_book.php --> show_book.php;
 ```
 
 ## Checklist
@@ -51,19 +52,19 @@ anything with :pleading_face: will be in my care (cus I have cool feature to thi
   - [x] Make a page to show table of account from database and link it to database
 - [x] Make add_room.php
   - [x] Link add_room.php to database
-  - [ ] Make a page to show table of room from database and link it to database
+  - [x] Make a page to show table of room from database and link it to database
 - [x] Make add_course.php
   - [x] Link add_course.php to database
-  - [ ] Make a page to show table of course from database and link it to database
+  - [x] Make a page to show table of course from database and link it to database
 - [x] Make add_section.php
   - [x] Link add_section.php to database
-  - [ ] Make a page to show table of section from database and link it to database
+  - [x] Make a page to show table of section from database and link it to database
 - [x] Create delete script
 - [x] Create generate password script
 - [x] Make uploading image show up
 - [x] Cool CSS I took from class :pleading_face:
 * **Teacher side**
-- [ ] Make add_booking.php :pleading_face:
+- [x] Make add_booking.php :pleading_face:
   - [ ] Link add_booking.php to database :pleading_face:
   - [ ] Make a page to show table of booking from database and link it to database :pleading_face:
 
