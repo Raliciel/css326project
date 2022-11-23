@@ -168,6 +168,11 @@ h2{
 	width:200px;	
 }
 
+.form input[type="time"], .form input[type="date"]{
+	display:block;
+	width:200px;	
+}
+
 .form input[type="number"]{
 	display:block;
 	width:200px;	
