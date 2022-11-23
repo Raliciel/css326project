@@ -65,8 +65,8 @@ anything with :pleading_face: will be in my care (cus I have cool feature to thi
 - [x] Cool CSS I took from class :pleading_face:
 * **Teacher side**
 - [x] Make add_booking.php :pleading_face:
-  - [ ] Link add_booking.php to database :pleading_face:
-  - [ ] Make a page to show table of booking from database and link it to database :pleading_face:
+  - [x] Link add_booking.php to database :pleading_face:
+  - [x] Make a page to show table of booking from database and link it to database :pleading_face:
 
 ## Deadline
  * **BIG PRESENTATION:** 25 NOVEMBER 2022
